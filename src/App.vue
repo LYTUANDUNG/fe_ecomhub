@@ -1,12 +1,14 @@
 <template>
-  <div class="p-6 text-center">
-    <h1 class="text-2xl font-bold text-blue-600">Welcome to ECOMHUB</h1>
-    <Button @click="count++">Clicked {{ count }} times</Button>
+  <div class="min-h-screen bg-slate-50 text-slate-900">
+    <AppHeader />
+    <main class="p-4">
+      <router-view />
+    </main>
+    <AppFooter />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { Button } from 'shadcn-vue'
-const count = ref(0)
+import AppHeader from './components/layout/Header.vue'
+import AppFooter from './components/layout/Footer.vue'
 </script>
