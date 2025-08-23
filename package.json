@@ -8,11 +8,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
     "@reduxjs/toolkit": "^1.6.0",
     "@unovue/detypes": "^0.8.3",
+    "@vueuse/core": "^13.7.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "jsonwebtoken": "^9.0.0",
+    "lucide-vue-next": "^0.541.0",
     "pinia": "^2.3.1",
+    "reka-ui": "^2.4.1",
     "shadcn-vue": "^2.0.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.0",
     "vue-router": "^4.5.1"
   },
