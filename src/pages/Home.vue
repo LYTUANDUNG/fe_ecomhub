@@ -15,7 +15,8 @@
 </template>
 
 <script setup>
-import Card from '@/components/ui/Card.vue'
-import Button from '@/components/ui/Button.vue'
+import {Card} from "@/components/ui/card/index.js";
+import {Button} from "@/components/ui/button/index.js";
+
 const onClick = () => { alert('Clicked!') }
 </script>
