@@ -9,6 +9,4 @@
 </template>
 
 <script setup>
-import AppHeader from './components/layout/Header.vue'
-import AppFooter from './components/layout/Footer.vue'
 </script>

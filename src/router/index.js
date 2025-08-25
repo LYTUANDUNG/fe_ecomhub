@@ -6,7 +6,6 @@ import NotFound from '@/pages/NotFound.vue'
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/about', name: 'About', component: About },
-  { path: '/test-circle', name: 'TestCircle', component: () => import('@/pages/CircleIndicatorDemo.vue') },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 

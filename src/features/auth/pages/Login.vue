@@ -11,7 +11,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import Button from '@/components/ui/Button.vue'
+import Button from '@/components/ui/button/Button.vue'
 const email = ref('')
 const password = ref('')
 const submit = () => { console.log('login', email.value, password.value) }
