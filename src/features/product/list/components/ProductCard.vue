@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-//nhận thuộc tính từ props
+
+// Nhận thuộc tính từ props
 defineProps({
   src: String,
   title: String,

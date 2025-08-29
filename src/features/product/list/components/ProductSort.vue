@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { ref } from "vue";
 
 const sortOption = ref("default");
@@ -22,4 +22,4 @@ const updateSort = (option) => {
       <option value="rating">Rating</option>
     </select>
   </div>
-</template>
+</template> -->

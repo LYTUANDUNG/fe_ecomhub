@@ -1,29 +1,16 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import ProductCard from "../components/ProductCard.vue"; 
 import { ProductData } from "../../models/ProductItem";
 
+// lấy data sản phẩm
 const products = ref(ProductData.items);
-const sortOption = ref("default");
-
-const sortedProducts = computed(() => {
-  return [...products.value].sort((a, b) => {
-    if (sortOption.value === "price-asc") return a.price - b.price;
-    if (sortOption.value === "price-desc") return b.price - a.price;
-    if (sortOption.value === "rating") return b.rating - a.rating;
-    return 0;
-  });
-});
-
-const updateSort = (option) => {
-  sortOption.value = option;
-};
 </script>
 
 <template>
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     <ProductCard
-      v-for="(item, index) in sortedProducts"
+      v-for="(item, index) in products"
       :key="index"
       :src="item.src"
       :title="item.title"
