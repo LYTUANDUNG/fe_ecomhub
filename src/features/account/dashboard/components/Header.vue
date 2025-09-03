@@ -1,10 +1,16 @@
 <script setup lang="ts">
 
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+})
 </script>
 
 <template>
   <div class="mb-3">
-    <h1 class="font-bold text-3xl">Your Account</h1>
+    <h1 class="text-3xl">{{ title }}</h1>
   </div>
 </template>
 
