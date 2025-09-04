@@ -2,27 +2,28 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-// Nhận thuộc tính từ props
 defineProps({
+  id: String,
   src: String,
   title: String,
   price: Number,
-  rating: Number,
+  rating: [Number, String],
   reviews: Number,
-  badge: String,
   minOrder: Number,
 });
 </script>
 
 <template>
-  <Card class="product-card shadow-sm hover:shadow-md transition p-3">
+  <Card 
+    class="product-card shadow-sm hover:shadow-md transition p-3"
+    @click="$router.push(`/products/${id}`)"
+  >
     <img :src="src" class="w-full h-48 object-contain mb-2" />
     <CardHeader class="p-0">
-      <span v-if="badge" class="text-xs bg-yellow-400 px-2 py-1 rounded mb-1 inline-block">{{ badge }}</span>
       <CardTitle class="text-sm font-semibold line-clamp-2 mt-1">{{ title }}</CardTitle>
       <CardDescription class="mt-1 text-lg font-bold">${{ price.toFixed(2) }}</CardDescription>
       <div class="flex items-center text-sm text-gray-600">
-        ⭐ {{ rating }} ({{ reviews.toLocaleString() }} reviews)
+        ⭐ {{ rating }} ({{ reviews }} reviews)
       </div>
       <CardDescription class="text-xs text-gray-500">Min. order: {{ minOrder }} piece(s)</CardDescription>
     </CardHeader>
