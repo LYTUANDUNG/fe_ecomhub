@@ -2,8 +2,10 @@
 import { computed } from 'vue';
 import OrderRow from './OrderRow.vue';
 import OrderTotal from './OrderTotal.vue';
-import PrimaryButton from './PrimaryButton.vue';
-import OrderNote from './OrderNote.vue';
+import Button from "@/components/ui/button/Button.vue";
+import CardDescription from "@/components/ui/card/CardDescription.vue";
+
+
 
 const props = defineProps({
   subtotal: { type: Number, required: true },
@@ -43,8 +45,10 @@ const onSubmit = () => { if (!props.loading) emit('submit'); };
 
     <OrderTotal :total="total" :format="format" />
 
-    <PrimaryButton :label="buttonText" :loading="loading" @click="onSubmit" />
+    <Button variant="default" size="sm">
+      Thanh toán
+    </Button>
 
-    <OrderNote />
+    <CardDescription>  Giá đã bao gồm thuế. Bạn có thể nhập mã giảm giá ở bước trước.</CardDescription>
   </aside>
 </template>
