@@ -2,17 +2,19 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/pages/Home.vue'
 import About from '@/pages/About.vue'
 import NotFound from '@/pages/NotFound.vue'
-
+import Cart from '@/features/cart/pages/Cart.vue'
+import Checkout from "/src/features/checkout/pages/Checkout.vue"
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/about', name: 'About', component: About },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+    { path: '/', name: 'Home', component: Home },
+    { path: '/about', name: 'About', component: About },
+    { path: '/cart', name: 'Cart', component: Cart },
+    { path: '/checkout', name: 'Checkout', component: Checkout },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+    history: createWebHistory(),
+    routes,
 })
 
 export default router
-

@@ -1,12 +1,11 @@
 <template>
   <div class="min-h-screen bg-slate-50 text-slate-900">
-    <AppHeader />
+    <AppHeader/>
     <main class="p-4">
-      <router-view />
+      <router-view/>
     </main>
-    <AppFooter />
+    <AppFooter/>
   </div>
 </template>
-
 <script setup>
 </script>
